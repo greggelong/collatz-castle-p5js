@@ -121,8 +121,8 @@ function makeStory(){
   story = [
     `You are now in Room ${currentRoom}.\n`,
     `There are ${collatzNeighbors(currentRoom).length} doors.\n`,
-    `you see, ${obj[currentRoom%5]}.\n`,
-    `You look down and see the floor${thefloor[currentRoom%2]}.\n`    // floor index even or odd
+    `you see, ${obj[currentRoom%obj.length]}.\n`,
+    `You look down and see the floor${thefloor[currentRoom%thefloor.length]}.\n`    // floor index even or odd
     ]
 
   return story
