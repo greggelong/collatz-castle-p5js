@@ -1,0 +1,11 @@
+canvas {
+  border: 1px solid #000;
+}
+
+body, pre {
+      padding: 0;
+      margin: 10;
+      color: #66FF00;
+      background-color: black;
+      font-size: 150%;
+    }
