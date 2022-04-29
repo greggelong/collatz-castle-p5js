@@ -21,11 +21,9 @@ I am using modulo to place objects in the rooms
 
 see it live at 
 
-[on github] (https://greggelong.github.io/collatz-castle-p5js/cc)
+[on github](https://greggelong.github.io/collatz-castle-p5js/cc)
 
 
-an earlier version is 
-
-[on replit] https://collatz-castle-p5js.greggelong.repl.co
+an earlier version is on replit where it was created
 
  
