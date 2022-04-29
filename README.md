@@ -1,5 +1,6 @@
 ## Collatz Castle Text Adventure
 
+
 a text adventure made from the maze that is the Collatz conjecture 
 
 It is a work in progress at the moment.
@@ -19,16 +20,20 @@ I need to make a better explanation of the play.
 I am using modulo to place objects in the rooms
 
 
-see it live at 
+see it live at: 
 
-[on github](https://greggelong.github.io/collatz-castle-p5js/cc)
+[live here](https://greggelong.github.io/collatz-castle-p5js/cc)
+
+see the code at:
+
+[code here](https://github.com/greggelong/collatz-castle-p5js/)
 
 
 first made in Python see the code at 
 
-https://github.com/greggelong/collatz-castle
+[the python code](https://github.com/greggelong/collatz-castle)
 
-The algorithm for fiding neighbors works like this in Python
+The algorithm for finding neighbors works like this in Python
 
 ```python
 def collatzNeighbors(num):
