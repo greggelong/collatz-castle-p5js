@@ -23,4 +23,4 @@ see it live at
 
 [on replit] https://collatz-castle-p5js.greggelong.repl.co
 
-[on github] https://greggelong.github.io/collatz-castle-p5js
+[on github] https://greggelong.github.io/collatz-castle-p5js/cc
