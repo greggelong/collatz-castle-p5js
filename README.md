@@ -7,7 +7,15 @@ It is a work in progress at the moment.
 
 You are randomly placed in somewhere along the tree of the Collatz numbers
 
-you must use 3n + 1 to find your way back to 1.
+you must use 3n + 1 to find your way back to room 1 which is the exit
+
+or pick up items in other numbered rooms. 
+
+But it is not so easy as room numbers  that would be adjacent on the regular number 
+
+line like 27 and 26 are very far from each other using 3n+1.
+
+[see a map by Jason Davies](https://www.jasondavies.com/collatz-graph/)
 
 I got the idea from a Douglas Hofstadter lecture where he was counting
 
