@@ -11,7 +11,9 @@ you must use 3n + 1 to find your way back to 1.
 
 I got the idea from a Douglas Hofstadter lecture where he was counting
 
-the Collatz to see how to get from one number to another.
+Collatz numbers to see how to get from one number to another.
+
+[video here](https://youtu.be/V9ohtKameio?t=1539)
 
 At the moment I have listed the path of rooms to return to room 1, which means you don’t need to do
 The calculation.
