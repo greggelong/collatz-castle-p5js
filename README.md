@@ -72,3 +72,14 @@ def collatzNeighbors(num):
 an earlier version is on replit where it was created
 
  
+ as this is a retro game I am making a version for the Commodore 64
+ 
+ and as Commodore BASIC does not have a built in mod() function
+ 
+ I am using the 
+ 
+ ``` BASIC
+ 
+ a-int(a/b)*b
+ 
+ ```
