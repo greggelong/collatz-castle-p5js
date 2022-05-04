@@ -111,9 +111,10 @@ an earlier version is on replit where it was created
 220 print"room 2:", a*2
 230 print"room 3:", a/2
 250 end
-ready.
 
 
  
  
  ```
+
+you can copy and paste into vice c64 I will create another repo with a c64 disk image
