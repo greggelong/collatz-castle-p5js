@@ -83,8 +83,9 @@ an earlier version is on replit where it was created
  a-int(a/b)*b
  
  ```
+ [see this discussion](https://retrocomputing.stackexchange.com/questions/9438/how-can-i-implement-the-modulus-operator-in-commodore-64-basic)
  
- here is the neighbors function in Commodore BASIC
+ Here is the neighbors function in Commodore BASIC
  
  ```BASIC
  
