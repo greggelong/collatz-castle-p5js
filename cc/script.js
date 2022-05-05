@@ -3,6 +3,7 @@ let myoutput1;  // current room
 let myoutput2; // path
 let myoutput3; // neighbors or doors
 let myoutput4; // description
+let myoutput5;
 let mystart;
 let currentRoom;
 
@@ -25,6 +26,7 @@ function setup() {
   myinput = createInput("choose a door");
 
   myoutput1 = createP("current room: "+str(currentRoom));
+  myoutput5 = createP("# of rooms to exit:")
   myoutput2 = createP("path");
   myoutput3 = createP("neighbors");
   myoutput4 = createP("description");
@@ -57,6 +59,7 @@ function doit(){
 
  function showRoom(){ 
   myoutput1.html("current room: "+str(currentRoom))
+  myoutput5.html("# of rooms to exit: "+str(collatzpath(currentRoom).length))
   myoutput2.html("Your path is "+str(collatzpath(currentRoom)))
   myoutput3.html("this room has doors: "+ str(collatzNeighbors(currentRoom)))
   // get description and show it

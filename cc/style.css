@@ -3,9 +3,9 @@ canvas {
 }
 
 body, pre {
-      padding: 0;
-      margin: 10;
+      padding: 2%;
+      margin: 1%;
       color: #66FF00;
       background-color: black;
-      font-size: 150%;
+      font-size: 120%;
     }
