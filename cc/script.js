@@ -6,6 +6,10 @@ let myoutput4; // description
 let myoutput5;
 let mystart;
 let currentRoom;
+let textart;
+let threedoors;
+let twodoors;
+let room1, room2, room3;
 
 // elements of the text are strings in arrays
  
@@ -20,7 +24,8 @@ let story;
 
 function setup() {
  // createP("Welcome to Collatz Castle")
-  
+ noCanvas();
+ textart = select('#textart');
   currentRoom = Math.floor(random(10,100));
   // put the starting position into the input
   myinput = createInput("choose a door");
@@ -62,9 +67,25 @@ function doit(){
   myoutput5.html("# of rooms to exit: "+str(collatzpath(currentRoom).length))
   myoutput2.html("Your path is "+str(collatzpath(currentRoom)))
   myoutput3.html("this room has doors: "+ str(collatzNeighbors(currentRoom)))
+  room1 = str(collatzNeighbors(currentRoom)[0])
+  room2 = str(collatzNeighbors(currentRoom)[1])
+  room3 = str(collatzNeighbors(currentRoom)[2]) // does not make error if not existent 
+  print(room1,room2,room3)
+
+
+
   // get description and show it
+
+
   let roomDes = makeStory();
   myoutput4.html(roomDes)
+  print(collatzNeighbors(currentRoom).length)
+  if (collatzNeighbors(currentRoom).length === 3){
+    textart.html(`${room1}  ${room2}  ${room3}\n[---]  [---] [---]\n[*--]  [*--] [*--]\n[---]  [---] [---]`);
+     
+  } else{
+    textart.html(`${room1}  ${room2}\n[---]  [---]\n[*--]  [*--]\n[---]  [---]`);
+  }
  }
 
 
@@ -134,3 +155,5 @@ function makeStory(){
 
  }
 
+ 
+         

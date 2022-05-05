@@ -2,10 +2,26 @@ canvas {
   border: 1px solid #000;
 }
 
+ul {
+  text-align: left;
+  justify-content: center;
+
+} 
+h1{
+   
+  font-size: x-large;
+      
+      font-family: monospace;
+}
+ 
+
 body, pre {
       padding: 2%;
-      margin: 1%;
-      color: #66FF00;
+      margin-left: 3%;
+      font-size: large;
       background-color: black;
-      font-size: 120%;
+      font-family: monospace;
+      color: #66FF00;
+      text-align: center;
+      justify-content: center;
     }
