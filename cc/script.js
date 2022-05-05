@@ -28,7 +28,7 @@ function setup() {
  textart = select('#textart');
   currentRoom = Math.floor(random(10,100));
   // put the starting position into the input
-  myinput = createInput("choose a door");
+  myinput = createInput("enter a door number");
   myinput.style("color: #33FF33");
   myinput.style("background-color: black");
   myinput.style(" border: solid #33FF33")
