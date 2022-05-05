@@ -29,6 +29,12 @@ function setup() {
   currentRoom = Math.floor(random(10,100));
   // put the starting position into the input
   myinput = createInput("choose a door");
+  myinput.style("color: #33FF33");
+  myinput.style("background-color: black");
+  myinput.style(" border: solid #33FF33")
+  myinput.style("font-family: monospace, monospace")
+  myinput.style("font-size: 22px")
+  myinput.style("box-sizing: border-box")
 
   myoutput1 = createP("current room: "+str(currentRoom));
   myoutput5 = createP("# of rooms to exit:")
