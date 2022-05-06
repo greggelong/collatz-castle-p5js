@@ -7,7 +7,7 @@ It is a work in progress at the moment.
 
 You are randomly placed in somewhere along the tree of the Collatz numbers.
 
-Your first taskt is to use use 3n + 1 to find your way back to room 1.
+Your first task is to use use 3n + 1 to find your way back to room 1.
 
 This first task can be completed by following a simple rule:
 
