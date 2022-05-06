@@ -75,7 +75,7 @@ function doit(){
 
  function showRoom(){ 
   myoutput1.html("current room: "+str(currentRoom))
-  myoutput5.html("# of rooms to exit: "+str(collatzpath(currentRoom).length))
+  myoutput5.html("# of rooms to exit: "+str((collatzpath(currentRoom).length)-1))
   myoutput2.html("Your path is "+str(collatzpath(currentRoom)))
   myoutput3.html("this room has doors: "+ str(collatzNeighbors(currentRoom)))
   myoutput6.html("inventory: "+str(inventory))
