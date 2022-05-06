@@ -14,10 +14,8 @@ let twodoors;
 let room1, room2, room3;
 let tasks= 0;
 let roomDes;
-
+let showpath;
 let startRooms = [12, 7, 84, 15, 301]
-
-
 
 // elements of the text are strings in arrays
  
@@ -45,12 +43,15 @@ function setup() {
   myinput.style("box-sizing: border-box")
 
   myoutput1 = createP("current room: "+str(currentRoom));
+  myoutput3 = createP("neighbors");
   myoutput5 = createP("# of rooms to exit:")
   myoutput6 = createP("inventory")
   myoutput2 = createP("path");
-  myoutput3 = createP("neighbors");
+  
   myoutput4 = createP("description");
   myinput.changed(doit);
+  showpath = createCheckbox("show path", false)
+  showpath.changed(showRoom)
   
   print(collatzpath(currentRoom))
   showRoom();
@@ -78,9 +79,13 @@ function doit(){
  }
 
  function showRoom(){ 
-  myoutput1.html("current room: "+str(currentRoom))
-  myoutput5.html("# of rooms to exit: "+str((collatzpath(currentRoom).length)-1))
-  myoutput2.html("Your path is "+str(collatzpath(currentRoom)))
+  myoutput1.html("current room: "+str(currentRoom));
+  myoutput5.html("# of rooms to exit: "+str((collatzpath(currentRoom).length)-1));
+  if (showpath.checked()){
+      myoutput2.html("Your path is "+str(collatzpath(currentRoom)));
+  } else{
+    myoutput2.html("Your path is hidden, good for you! (check 'show path' for help)");
+  }
   myoutput3.html("this room has doors: "+ str(collatzNeighbors(currentRoom)))
   myoutput6.html("inventory: "+str(inventory))
   room1 = str(collatzNeighbors(currentRoom)[0])
