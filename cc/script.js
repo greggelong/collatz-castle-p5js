@@ -13,7 +13,11 @@ let threedoors;
 let twodoors;
 let room1, room2, room3;
 let tasks= 0;
-let roomDes
+let roomDes;
+
+let startRooms = [12, 7, 84, 15, 301]
+
+
 
 // elements of the text are strings in arrays
  
@@ -30,7 +34,7 @@ function setup() {
  // createP("Welcome to Collatz Castle")
  noCanvas();
  textart = select('#textart');
-  currentRoom = 12;//Math.floor(random(10,100));
+  currentRoom = random(startRooms);//Math.floor(random(10,100));
   // put the starting position into the input
   myinput = createInput("enter a door number");
   myinput.style("color: #33FF33");
