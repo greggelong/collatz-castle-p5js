@@ -1,15 +1,19 @@
 let myinput;
+let inventory = ["mind"]
 let myoutput1;  // current room
 let myoutput2; // path
 let myoutput3; // neighbors or doors
 let myoutput4; // description
 let myoutput5;
+let myoutput6; // inventory
 let mystart;
 let currentRoom;
 let textart;
 let threedoors;
 let twodoors;
 let room1, room2, room3;
+let firstTaskFinished = false;
+let roomDes
 
 // elements of the text are strings in arrays
  
@@ -26,7 +30,7 @@ function setup() {
  // createP("Welcome to Collatz Castle")
  noCanvas();
  textart = select('#textart');
-  currentRoom = Math.floor(random(10,100));
+  currentRoom = 12;//Math.floor(random(10,100));
   // put the starting position into the input
   myinput = createInput("enter a door number");
   myinput.style("color: #33FF33");
@@ -38,6 +42,7 @@ function setup() {
 
   myoutput1 = createP("current room: "+str(currentRoom));
   myoutput5 = createP("# of rooms to exit:")
+  myoutput6 = createP("inventory")
   myoutput2 = createP("path");
   myoutput3 = createP("neighbors");
   myoutput4 = createP("description");
@@ -73,25 +78,39 @@ function doit(){
   myoutput5.html("# of rooms to exit: "+str(collatzpath(currentRoom).length))
   myoutput2.html("Your path is "+str(collatzpath(currentRoom)))
   myoutput3.html("this room has doors: "+ str(collatzNeighbors(currentRoom)))
+  myoutput6.html("inventory: "+str(inventory))
   room1 = str(collatzNeighbors(currentRoom)[0])
   room2 = str(collatzNeighbors(currentRoom)[1])
   room3 = str(collatzNeighbors(currentRoom)[2]) // does not make error if not existent 
-  print(room1,room2,room3)
-
-
-
-  // get description and show it
-
-
-  let roomDes = makeStory();
-  myoutput4.html(roomDes)
-  print(collatzNeighbors(currentRoom).length)
+  print(room1,room2,room3, currentRoom, firstTaskFinished)
+  // make doors
   if (collatzNeighbors(currentRoom).length === 3){
     textart.html(`${room1}  ${room2}  ${room3}\n[---]  [---] [---]\n[*--]  [*--] [*--]\n[---]  [---] [---]`);
      
   } else{
     textart.html(`${room1}  ${room2}\n[---]  [---]\n[*--]  [*--]\n[---]  [---]`);
   }
+
+
+  // get description and show it
+  // first check for tasks
+
+  if (currentRoom == 1 && firstTaskFinished == false){
+    roomDes ="CONGRATULATIONS YOU HAVE COMPLETED THE FIRST TRIAL OF COLLATZ'S CASTLE\nNow try and get the living stone from room 3"
+    firstTaskFinished = true;
+    print("you made it!!")
+
+  }else if(currentRoom ==3 && firstTaskFinished == true){
+    inventory.push("living stone")
+    roomDes =="You see the living stone and pick it up."
+    myoutput6.html("inventory: "+str(inventory));
+  }
+  else{
+    roomDes = makeStory(); // gets room description from function that generates a story based on modulo
+  }
+  myoutput4.html(roomDes)
+  print(collatzNeighbors(currentRoom).length)
+  
  }
 
 
