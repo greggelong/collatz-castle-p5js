@@ -12,7 +12,7 @@ let textart;
 let threedoors;
 let twodoors;
 let room1, room2, room3;
-let firstTaskFinished = false;
+let tasks= 0;
 let roomDes
 
 // elements of the text are strings in arrays
@@ -82,7 +82,7 @@ function doit(){
   room1 = str(collatzNeighbors(currentRoom)[0])
   room2 = str(collatzNeighbors(currentRoom)[1])
   room3 = str(collatzNeighbors(currentRoom)[2]) // does not make error if not existent 
-  print(room1,room2,room3, currentRoom, firstTaskFinished)
+  print(room1,room2,room3, currentRoom, tasks)
   // make doors
   if (collatzNeighbors(currentRoom).length === 3){
     textart.html(`${room1}  ${room2}  ${room3}\n[---]  [---] [---]\n[*--]  [*--] [*--]\n[---]  [---] [---]`);
@@ -95,15 +95,16 @@ function doit(){
   // get description and show it
   // first check for tasks
 
-  if (currentRoom == 1 && firstTaskFinished == false){
-    roomDes ="CONGRATULATIONS YOU HAVE COMPLETED THE FIRST TRIAL OF COLLATZ'S CASTLE\nNow try and get the living stone from room 3"
-    firstTaskFinished = true;
+  if (currentRoom == 1 && tasks == 0){
+    roomDes =`CONGRATULATIONS YOU HAVE COMPLETED THE FIRST TRIAL OF COLLATZ'S CASTLE!!!\nNow try and get the RUBY from room 3`
+    tasks++;
     print("you made it!!")
 
-  }else if(currentRoom ==3 && firstTaskFinished == true){
-    inventory.push("living stone")
-    roomDes =="You see the living stone and pick it up."
+  }else if(currentRoom ==3 && tasks == 1){
+    roomDes = "You see the RUBY and pick it up."
+    inventory.push("RUBY")
     myoutput6.html("inventory: "+str(inventory));
+    tasks++
   }
   else{
     roomDes = makeStory(); // gets room description from function that generates a story based on modulo
