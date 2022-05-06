@@ -5,15 +5,23 @@ a text adventure made from the maze that is the Collatz conjecture
 
 It is a work in progress at the moment.
 
-You are randomly placed in somewhere along the tree of the Collatz numbers
+You are randomly placed in somewhere along the tree of the Collatz numbers.
 
-you must use 3n + 1 to find your way back to room 1 which is the exit
+Your first taskt is to use use 3n + 1 to find your way back to room 1.
 
-or pick up items in other numbered rooms. 
+This first task can be completed by following a simple rule:
 
-But it is not so easy as room numbers  that would be adjacent on the regular number 
+* if your current room is even choose the door that is half that number
 
-line like 27 and 26 are very far from each other using 3n+1.
+* if the current room is odd choose the door that is triple that number plus one
+
+The second task is to pick up an item in room three.  
+
+but how do you get from room one to room three?
+
+It is not so easy. The room numbers are not adjacent  as on the regular number 
+
+line.  Rooms 3 and 4 are not next to one another. If you need help use a map.
 
 [see a map by Jason Davies](https://www.jasondavies.com/collatz-graph/)
 
@@ -24,7 +32,7 @@ Collatz numbers to see how to get from one number to another.
 [video here](https://youtu.be/V9ohtKameio?t=1539)
 
 At the moment I have listed the path of rooms to return to room 1, which means you don’t need to do
-The calculation.
+
 I need to make a better explanation of the play.
 
 I am using modulo to place objects in the rooms
