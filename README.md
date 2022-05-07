@@ -133,3 +133,4 @@ you can copy and paste into vice c64 I will create another repo with a c64 disk 
 - [ ] add a task from room to room
 - [ ] make a room to room algorithm. A simple path can be current room and other room back to room one and see where they intersect 
 - [ ] improve room description and add more story 
+- [ ] make some random walking Collatz nodes of room and neighbors that stick to one another, for example one node would be [3,10,5,20] and [3,10,6] the 3 and four nodes could be different shapes
