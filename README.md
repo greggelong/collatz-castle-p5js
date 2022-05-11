@@ -137,3 +137,7 @@ you can copy and paste into vice c64 I will create another repo with a c64 disk 
 - [ ] run the rules as a 1 d cellular automata 
 
 [see the random walking graph](https://greggelong.github.io/CollatzGraph/)
+
+--- 
+need to add some philosophical ideas here
+
