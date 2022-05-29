@@ -137,7 +137,7 @@ an earlier version is on replit where it was created
 you can copy and paste into vice c64 I will create another repo with a c64 disk image
 
 
-- [ ] add some more tasks in other rooms
+- [X] add some more tasks in other rooms
 - [ ] add a task from room to room
 - [ ] make a room to room algorithm. A simple path can be current room and other room back to room one and see where they intersect 
 - [ ] improve room description and add more story 
